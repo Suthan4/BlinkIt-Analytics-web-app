@@ -47,23 +47,27 @@ const QuickCommece = () => {
 
   const cubeApi = cube(apiToken, { apiUrl, transport });
   return (
-    <div className="bg-gray-50">
+    <>
       <CubeProvider cubeApi={cubeApi}>
-        <QueryRenderer query={query} subscribe={useSubscription}>
-          {({ resultSet }) => {
-            return (
-              <BarCharts
-                chartType={chartType}
-                resultSet={resultSet}
-                pivotConfig={pivotConfig}
-              />
-            );
-          }}
-        </QueryRenderer>
+        <div className="my-8">
+          <QueryRenderer query={query} subscribe={useSubscription}>
+            {({ resultSet }) => {
+              return (
+                <>
+                  <BarCharts
+                    chartType={chartType}
+                    resultSet={resultSet}
+                    pivotConfig={pivotConfig}
+                  />
+                </>
+              );
+            }}
+          </QueryRenderer>
+        </div>
         <SkuLevelData />
         <CityLevelData />
       </CubeProvider>
-    </div>
+    </>
   );
 };
 

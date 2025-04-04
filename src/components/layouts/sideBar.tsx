@@ -44,7 +44,7 @@ export const Sidebar = () => {
 
   return (
     <aside className="flex justify-between h-screen bg-white">
-      <div className="w-[3vw] mt-3">
+      <div className="w-[3.5vw] mt-3">
         <div className="p-1 flex flex-col items-center space-y-4 h-full">
           <div className="flex flex-col items-center space-y-4">
             <img
