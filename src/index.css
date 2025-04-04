@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer {
+    html {
+        @apply text-base
+    }
+}
+
+@theme {
+    --font-display: "Mulish", "sans-serif";
+    --color-primary: #309E96;
+}
